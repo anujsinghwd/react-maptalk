@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import ReactMaptalk from 'react-maptalk';
 import './index.css';
-import PropTypes from 'prop-types';
 
 export default class App extends Component {
 

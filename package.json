@@ -1,11 +1,11 @@
 {
   "name": "react-maptalk",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A React binding of maptalks",
   "author": "anujsinghwd",
   "homepage": "https://anujsinghwd.github.io/react-maptalk",
   "license": "MIT",
-  "repository": "https://bitbucket.org/anujsinghwd/react-maptalk",
+  "repository": "https://github.com/anujsinghwd/react-maptalk",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "jsnext:main": "dist/index.es.js",

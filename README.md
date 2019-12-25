@@ -11,6 +11,7 @@
 * [node](https://nodejs.org)
 * [npm](https://www.npmjs.com/)
 * [React JS](https://reactjs.org/)
+* [maptalks](https://maptalks.org/)
 
 **Yarn**
 ```
@@ -25,7 +26,7 @@ npm install react-maptalk
 ## Documentation
 
 ### Components
-* [ReactMaptalk](/docs/ReactMaptalk.md)
+* [ReactMaptalk](https://github.com/anujsinghwd/react-maptalk/blob/master/docs/ReactMaptalk.md)
 
 
 ## Usage
