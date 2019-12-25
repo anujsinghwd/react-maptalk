@@ -5,6 +5,18 @@
   "author": "anujsinghwd",
   "homepage": "https://anujsinghwd.github.io/react-maptalk",
   "license": "MIT",
+  "keywords": [
+    "react js",
+    "react-maptalk",
+    "maptlaks",
+    "react maptalks",
+    "react maptalk",
+    "react-maptalks"
+  ],
+  "bugs": {
+    "url" : "https://github.com/anujsinghwd/react-maptalk/issues",
+     "email" : "anuj_singh@outlook.in"
+  },
   "repository": "https://github.com/anujsinghwd/react-maptalk",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
