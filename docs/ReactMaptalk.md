@@ -11,9 +11,9 @@
 | centerAroundCurrentLocation | `boolean` | `false` | `false` | 
 | onClick | `func` | `false` | `false` | 
 
-```bash
+```jsx
 import  React, { Component } from  'react'
-import  ReactMaptalk  from  'react-maptalk'
+import { ReactMaptalk } from  'react-maptalk'
 class  Example  extends  Component {
 	constructor(props){
 		super(props);

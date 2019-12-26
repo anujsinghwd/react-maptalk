@@ -28,8 +28,8 @@ function styleInject(css, ref) {
   }
 }
 
-var css = "/* add css styles here (optional) */\n\n.styles_mapContainer__3deXY {\n  position:absolute;\n  left:0;\n  width:100%;\n  top:0;\n  bottom:0;\n}";
-var styles = { "mapContainer": "styles_mapContainer__3deXY" };
+var css = "/* add css styles here (optional) */\n\n.style_mapContainer__2nxsN {\n    position:absolute;\n    left:0;\n    width:100%;\n    top:0;\n    bottom:0;\n  }";
+var styles = { "mapContainer": "style_mapContainer__2nxsN" };
 styleInject(css);
 
 /*!
@@ -31985,14 +31985,6 @@ var ReactMaptalk = function (_Component) {
 
       if (map) {
         map.panTo([lon, lat]);
-        // map.animateTo({
-        //   center: [lon, lat],
-        //   zoom: 13,
-        //   pitch: 0,
-        //   bearing: 20
-        // }, {
-        //   duration: 4000
-        // });
       }
     }
   }, {
@@ -32019,7 +32011,6 @@ var ReactMaptalk = function (_Component) {
       evtNames.forEach(function (e) {
         _this4.map.on(e, _this4.handleEvent(e));
       });
-
       window.map = this.map;
     }
   }, {
@@ -32075,7 +32066,6 @@ var ReactMaptalk = function (_Component) {
   return ReactMaptalk;
 }(Component);
 
-
 ReactMaptalk.propTypes = {
   lat: PropTypes.number,
   lon: PropTypes.number,
@@ -32100,5 +32090,126 @@ evtNames.forEach(function (e) {
   return ReactMaptalk.defaultProps['on' + camelize(e)] = function () {};
 });
 
-export default ReactMaptalk;
+var Marker$1 = function (_Component) {
+  inherits(Marker$$1, _Component);
+
+  function Marker$$1(props) {
+    classCallCheck(this, Marker$$1);
+
+    var _this = possibleConstructorReturn(this, (Marker$$1.__proto__ || Object.getPrototypeOf(Marker$$1)).call(this, props));
+
+    _this.state = {};
+    return _this;
+  }
+
+  createClass(Marker$$1, [{
+    key: 'componentDidUpdate',
+    value: function componentDidUpdate(prevProps) {
+      if (this.props.lat !== prevProps.lat || this.props.lon !== prevProps.lon || this.props.visible !== prevProps.visible || this.props.editable !== prevProps.editable || this.props.cursor !== prevProps.cursor || this.props.shadowBlur !== prevProps.shadowBlur || this.props.shadowColor !== prevProps.shadowColor || this.props.draggable !== prevProps.draggable || this.props.dragShadow !== prevProps.dragShadow || this.props.textFaceName !== prevProps.textFaceName || this.props.textFill !== prevProps.textFill || this.props.textHorizontalAlignment !== prevProps.textHorizontalAlignment || this.props.textSize !== prevProps.textSize) {
+        this.renderMarker();
+      }
+    }
+  }, {
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      this.renderMarker(window.map);
+    }
+  }, {
+    key: 'removeLayer',
+    value: function removeLayer(layer) {
+      map.removeLayer(layer);
+    }
+  }, {
+    key: 'renderMarker',
+    value: function renderMarker() {
+      var _props = this.props,
+          lat = _props.lat,
+          lon = _props.lon,
+          visible = _props.visible,
+          editable = _props.editable,
+          shadowColor = _props.shadowColor,
+          shadowBlur = _props.shadowBlur,
+          draggable = _props.draggable,
+          dragShadow = _props.dragShadow,
+          textFaceName = _props.textFaceName,
+          textName = _props.textName,
+          textFill = _props.textFill,
+          textHorizontalAlignment = _props.textHorizontalAlignment,
+          textSize = _props.textSize,
+          cursor = _props.cursor,
+          markerId = _props.markerId;
+
+      map = window.map;
+
+      if (this.marker) {
+        this.removeLayer(this.marker);
+      }
+
+      var point = new Marker([lon, lat], {
+        visible: visible,
+        editable: editable,
+        cursor: cursor,
+        shadowBlur: shadowBlur,
+        shadowColor: shadowColor,
+        draggable: draggable,
+        dragShadow: dragShadow,
+        drawOnAxis: null,
+        symbol: {
+          'textFaceName': textFaceName,
+          'textName': textName,
+          'textFill': textFill,
+          'textHorizontalAlignment': textHorizontalAlignment,
+          'textSize': textSize
+        }
+      });
+
+      if (map) {
+        this.marker = new VectorLayer('vector', point).addTo(map);
+      }
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      return null;
+    }
+  }]);
+  return Marker$$1;
+}(Component);
+
+Marker$1.propTypes = {
+  lat: PropTypes.number,
+  lon: PropTypes.number,
+  visible: PropTypes.bool,
+  editable: PropTypes.bool,
+  cursor: PropTypes.string,
+  shadowBlur: PropTypes.number,
+  draggable: PropTypes.bool,
+  dragShadow: PropTypes.bool,
+  shadowColor: PropTypes.string,
+  textFaceName: PropTypes.string,
+  textName: PropTypes.string,
+  textFill: PropTypes.string,
+  textHorizontalAlignment: PropTypes.string,
+  textSize: PropTypes.number
+};
+
+Marker$1.defaultProps = {
+  lat: 28.774929,
+  lon: 78.419416,
+  visible: true,
+  editable: true,
+  cursor: 'pointer',
+  shadowBlur: 0,
+  shadowColor: 'black',
+  draggable: false,
+  dragShadow: false,
+  drawOnAxis: null,
+  textFaceName: 'sans-serif',
+  textName: 'ReactMapTalks',
+  textFill: '#34495e',
+  textHorizontalAlignment: 'right',
+  textSize: 40
+};
+
+export { ReactMaptalk, Marker$1 as Marker };
 //# sourceMappingURL=index.es.js.map

@@ -1,9 +1,9 @@
 {
   "name": "react-maptalk",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A React binding of maptalks",
   "author": "anujsinghwd",
-  "homepage": "https://anujsinghwd.github.io/react-maptalk",
+  "homepage": "https://anujsinghwd.github.io/react-maptalk/",
   "license": "MIT",
   "keywords": [
     "react js",

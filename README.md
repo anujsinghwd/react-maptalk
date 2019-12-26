@@ -27,6 +27,7 @@ npm install react-maptalk
 
 ### Components
 * [ReactMaptalk](https://github.com/anujsinghwd/react-maptalk/blob/master/docs/ReactMaptalk.md)
+* [Marker](https://github.com/anujsinghwd/react-maptalk/blob/master/docs/Markers/Marker.md)
 
 
 ## Usage
@@ -34,7 +35,7 @@ npm install react-maptalk
 ```jsx
 import React, { Component } from 'react'
 
-import ReactMaptalk from 'react-maptalk'
+import { ReactMaptalk } from 'react-maptalk'
 
 class Example extends Component {
   render () {
